@@ -20,7 +20,7 @@ class BreakthroughTournamentPlayer:
     evaluation functions must be deterministic and must not perform additional
     search.
 
-    The tournament will use a 7-row, 5-column board. A time limit of 10 seconds
+    The tournament will use a 7-row, 5-column board. A time limit of 15 seconds
     will be enforced on each move; if the time limit is exceeded a random move
     will be played. Each pair of teams will play two games, alternating which
     agent moves first. If needed, other board sizes may be used to break ties.
@@ -48,11 +48,11 @@ class MancalaTournamentPlayer:
     For the Mancala tournament, you may implement any heuristic and any variety
     of game tree search you like, including iterative deepening. It is up to you
     how to trade off between computation time spent on evaluating heuristics and
-    computation time spent searching. Your agent may not perform Monte Carlo
-    tree search or other randomized algorithms.
+    computation time spent searching. Your agent MAY NOT use Monte Carlo tree
+    search or other randomized algorithms.
 
     The tournament will use 6 houses per player and 4 seeds per house. A time
-    limit of 10 seconds will be enforced on each move; if the time limit is
+    limit of 15 seconds will be enforced on each move; if the time limit is
     exceeded a random move will be played. Each pair of teams will play an
     even two games, alternating which agent moves first. If needed, games
     of other sizes may be used to break ties.

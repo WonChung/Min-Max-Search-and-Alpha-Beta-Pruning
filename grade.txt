@@ -1,0 +1,31 @@
+5 / 5 mancalaBasicEval & breakthroughBasicEval
+  1 / 1 both return largest values on terminal states
+  3 / 3 both evaluate correctly on non-terminal states
+  1 / 1 both handle non-standard board sizes
+
+
+
+6 / 6 MinMaxPlayer (testing with basicEval)
+  2 / 2 wins >= 8/10 against RandomPlayer on depth 3
+  2 / 2 goes 1-1 against Bryce's implementation at various depths
+  2 / 2 improves as depth increases
+
+
+
+4 / 4 PruningPlayer
+  2 / 2 gives the same moves as MinMaxPlayer
+  2 / 2 runs clearly faster than MinMaxPlayer
+
+
+
+4 / 5 mancalaBetterEval & breakthroughBetterEval (with PruningPlayer)
+  2 / 2 plays better than basicEval at some depth
+  1 / 2 never plays worse than basicEval
+  1 / 1 adequately explained in comments
+
+You are consistently getting great results on your betterEval except on depth 2. At depth 2, your betterEval loses 2/2 games.
+
+19 / 20 total
+
+
+

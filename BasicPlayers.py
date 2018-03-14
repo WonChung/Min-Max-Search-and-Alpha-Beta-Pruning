@@ -1,5 +1,5 @@
 ########################################
-# CS63: Artificial Intelligence, Lab 4
+# CS63: Artificial Intelligence, Lab 3
 # Spring 2018, Swarthmore College
 ########################################
 # NOTE: you should not need to modify this file.
@@ -17,6 +17,7 @@ class HumanPlayer:
     def getMove(self, game):
         move = None
         while move not in game.availableMoves:
+            print([move for move in game.availableMoves])
             if all(isinstance(move, int) for move in game.availableMoves):
                 print("select a move from", game.availableMoves)
                 try:

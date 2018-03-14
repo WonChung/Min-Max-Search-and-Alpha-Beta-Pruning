@@ -1,5 +1,5 @@
 ########################################
-# CS63: Artificial Intelligence, Lab 4
+# CS63: Artificial Intelligence, Lab 3
 # Spring 2018, Swarthmore College
 ########################################
 # NOTE: you should not need to modify this file.
@@ -7,9 +7,7 @@
 
 import numpy as np
 
-from BoardGames import _base_game
-
-class Mancala(_base_game):
+class Mancala:
     """Implements Kalah, a common variant of Mancala.
     See en.wikipedia.org/wiki/Kalah for rules.
 
@@ -36,7 +34,6 @@ class Mancala(_base_game):
         self._moves = None
         self._terminal = None
         self._repr = None
-        self._hash = None
 
     def _print_char(self, i):
         return i
@@ -75,7 +72,7 @@ class Mancala(_base_game):
             else:
                 rows[1] += "\n"
                 rows[3] += "<\n"
-            self._repr = "".join(rows)
+        self._repr = "".join(rows)
         return self._repr
 
     def makeMove(self, move):

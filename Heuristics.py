@@ -2,8 +2,8 @@
 # CS63: Artificial Intelligence, Lab 3
 # Spring 2018, Swarthmore College
 ########################################
-# full name(s): Won Chung and David Chang
-# username(s): wchung3 and dchang2
+# full name(s):
+# username(s):
 ########################################
 
 import numpy as np
@@ -132,9 +132,9 @@ def breakthroughBetterEval(breakthrough_game):
     - (player-1's sum of ranks (rank is 0 if the move results in piece captured))**3."""
     if(breakthrough_game.isTerminal):
         if(breakthrough_game.winner == 1):
-            return (len(breakthrough_game.board)*len(breakthrough_game.board[0]))
+            return (len(breakthrough_game.board)*len(breakthrough_game.board[0]))**3
         else:
-            return -1*((len(breakthrough_game.board)*len(breakthrough_game.board[0])))
+            return -1*((len(breakthrough_game.board)*len(breakthrough_game.board[0]))**3)
     else:
         board = breakthrough_game.board
         player1 = 0
@@ -143,14 +143,14 @@ def breakthroughBetterEval(breakthrough_game):
             for col in range(len(board[0])):
                 if(board[row][col] == 1):
                     player1 += ((row+1)**3)
-                    if((row < (len(board)-3)) and col > 0 and col < len(board[0])-1):
-                        if((board[row+2][col+1] == -1) or (board[row+2][col-1] == -1) or (board[row+3][col+1] == -1) or (board[row+3][col-1] == -1)):
+                    if((row < (len(board)-2)) and col > 0 and col < len(board[0])-1):
+                        if((board[row+2][col+1] == -1) or (board[row+2][col-1] == -1)):
                             player1 -= (row+1)**3
 
                 elif(board[row][col] == -1):
                     player2 += ((len(board)-row)**3)
-                    if((row > 3) and col > 0 and col < len(board[0])-1):
-                        if((board[row-2][col+1] == 1) or (board[row-2][col-1] == 1) or (board[row-3][col+1] == 1) or (board[row-3][col-1] == 1)):
+                    if((row > 2) and col > 0 and col < len(board[0])-1):
+                        if((board[row-2][col+1] == 1) or (board[row-2][col-1] == 1)):
                             player2 -= (len(board)-row)**3
 
         return (player1-player2)

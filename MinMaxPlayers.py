@@ -2,8 +2,8 @@
 # CS63: Artificial Intelligence, Lab 3
 # Spring 2018, Swarthmore College
 ########################################
-# full name(s): Won Chung and David Chang
-# username(s): wchung3 and dchang2
+# full name(s):
+# username(s):
 ########################################
 from math import inf
 class MinMaxPlayer:
