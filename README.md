@@ -5,6 +5,7 @@ Run "python3 PlayGame.py -h" to see the available command line options.
 
 ## Example Commands
 "python3 PlayGame.py breakthrough random human --show"
+
 "python3 PlayGame.py mancala human human --show"
 
 ## Acknowledgments
