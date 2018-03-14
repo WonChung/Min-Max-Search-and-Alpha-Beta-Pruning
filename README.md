@@ -1,4 +1,5 @@
 # Min-Max-Search-and-Alpha-Beta-Pruning
+The purpose of this project is to create agents that can play Mancala and Breakthrough using depth-bounded min/max search with alpha/beta pruning.
 
 ## Running the Program
 Run "python3 PlayGame.py -h" to see the available command line options.
